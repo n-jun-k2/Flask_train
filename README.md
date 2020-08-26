@@ -11,3 +11,10 @@ docker-compose exec python /bin/bash
 python example1
 ...
 ```
+
+# connect to database
+pythonで接続するときにはDB事に以下のパッケージをインストールしてください。
+- Postgres: psycopg2
+- Oracle: cx_Oracle
+- MySQL: mysqlclient
+- SQLite: pysqlite
