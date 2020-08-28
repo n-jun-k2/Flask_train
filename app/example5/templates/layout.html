@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        {% if request=="GET" %}
+            {% block input %}
+            {% endblock %}
+        {% else %}
+            {% block result %}
+            {% endblock %}
+        {% endif %}
+        <form action="/" method="POST">
+            <input name="num">
+            <input type="submit" name="send">
+        </form>
+    </body>
+</html>
