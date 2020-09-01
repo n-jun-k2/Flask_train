@@ -12,6 +12,12 @@ python example1
 ...
 ```
 
+# Connect to WSL2 localhost
+Prepare a file ``c:/Users/<user name>/.wslconfig`` on the Windows side and describe as follows.
+```
+localhostForwarding=True
+```
+
 # connect to database
 pythonで接続するときにはDB事に以下のパッケージをインストールしてください。
 - Postgres: psycopg2
