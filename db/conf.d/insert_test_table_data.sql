@@ -1,0 +1,2 @@
+INSERT INTO USER VALUES (1, 'password1');
+INSERT INTO USER VALUES (2, 'password2');
