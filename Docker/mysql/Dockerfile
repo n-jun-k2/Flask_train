@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:8.0.21
 
-COPY ./Docker/mysql/*.sh /root
-CMD ["/bin/bash", "/root/start.sh"]
+#COPY ./Docker/mysql/start.sh /root
+#ENTRYPOINT ["/bin/bash", "/root/start.sh"]

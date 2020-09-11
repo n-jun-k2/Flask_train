@@ -24,3 +24,28 @@ pythonで接続するときにはDB事に以下のパッケージをインスト
 - Oracle: cx_Oracle
 - MySQL: mysqlclient
 - SQLite: pysqlite
+
+
+# WSL2 permission error
+mysqlの構築の際にハマったエラー対応方法(以下の奴ら)
+[参考](https://sig9.hatenablog.com/entry/2020/02/19/000000)
+```
+mysql_1   | mysqld: Cannot change permissions of the file 'private_key.pem' (OS errno 1 - Operation not permitted)
+mysql_1   | 2020-09-10T05:04:53.449233Z 0 [ERROR] [MY-010295] [Server] Could not set file permission for private_key.pem
+mysql_1   | 2020-09-10T05:04:53.449629Z 0 [ERROR] [MY-010119] [Server] Aborting
+```
+
+1. ```/etc/wsl.conf```をWSL2のディストリビューションに作成。
+
+```bash
+# wslのディストリビューションにwslの設定ファイルを新規作成
+> sudo touch /etc/wsl.conf
+# 設定ファイルを編集する。
+> vi /etc/wsl.conf
+```
+
+2. マウントオプションを変更する。
+```
+[automount]
+options = "metadata"
+```

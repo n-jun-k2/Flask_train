@@ -1,7 +1,35 @@
 DROP TABLE IF EXISTS USER;
-
+DROP TABLE IF EXISTS CHARS;
+DROP TABLE IF EXISTS SampleLike;
+DROP TABLE IF EXISTS Shohin;
+DROP TABLE IF EXISTS Skills;
 
 CREATE TABLE USER (
     id CHAR(4) NOT NULL PRIMARY KEY,
     password VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE CHARS (
+    chr CHAR(3) NOT NULL,
+    PRIMARY KEY (chr)
+);
+
+CREATE TABLE SampleLike (
+    strcol VARCHAR(6) NOT NULL,
+    PRIMARY KEY (strcol)
+);
+
+CREATE TABLE Shohin (
+    id CHAR(4) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    type VARCHAR(32) NOT NULL,
+    price INTEGER,
+    cost INTEGER,
+    time DATE,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Skills (
+    name VARCHAR(32),
+    PRIMARY KEY (name)
+)
