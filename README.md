@@ -17,6 +17,10 @@ Prepare a file ``c:/Users/<user name>/.wslconfig`` on the Windows side and descr
 ```
 localhostForwarding=True
 ```
+# Connect to the server
+```
+http://localhost:5000/....
+```
 
 # connect to database
 pythonで接続するときにはDB事に以下のパッケージをインストールしてください。
