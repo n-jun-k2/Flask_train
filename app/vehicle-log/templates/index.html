@@ -54,6 +54,14 @@
                         <th scope="col">メモ</th>
                     </tr>
                 </thead>
+                    {%for start, finish, memo, create_at in log_list%}
+                    <tr>
+                        <th scope="row">{{start}}</th>
+                        <td>{{finish}}</td>
+                        <td>{{create_at}}</td>
+                        <td>{{memo}}</td>
+                    </tr>
+                    {%endfor%}
                 <tbody>
                     
                 </tbody>
