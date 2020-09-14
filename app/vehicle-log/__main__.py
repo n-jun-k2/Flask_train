@@ -23,10 +23,13 @@ def save():
     query = insert_query('vehicle', str_start_point, str_finish_point, str_memo, datetime.datetime.now())
     app.logger.debug(query)
     
-    with engine.connect() as con:
-        con.execute(query)
-
-    return redirect("/")
+    try:
+        if not str_start_point or not str_finish_point:
+            raise RuntimeError('Some of the required fields were None')
+        with engine.connect() as con:
+            con.execute(query)
+    finally:
+        return redirect("/")
 
 @app.route("/")
 def main_page():
