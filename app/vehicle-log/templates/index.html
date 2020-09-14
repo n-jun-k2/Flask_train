@@ -18,17 +18,17 @@
         </nav>
 
         <div class="container">
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="POST" action="/save">
                 <div class="form-group">
                     <div class = " form-row ">
                         <div class="form-group col-sm-4">
                             <label for="formDeparturePoint">出発</label>
-                            <input type="text" class="form-control" id="formDeparturePoint" placeholder="東京">
+                            <input type="text" name="start_point" class="form-control" id="formDeparturePoint" placeholder="東京">
                         </div>
     
                         <div class="form-group col-sm-4">
                             <label for="formArrivalPoint">出発</label>
-                            <input type="text" class="form-control" id="formArrivalPoint" placeholder="名古屋">
+                            <input type="text" name="finish_point" class="form-control" id="formArrivalPoint" placeholder="名古屋">
                         </div>
     
                         <div class="form-group col-sm-4 d-flex align-items-end">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <label for="formMemo">メモ</label>
-                    <textarea class="form-control" rows="4"></textarea>
+                    <textarea class="form-control" name="memo" rows="4"></textarea>
                 </div>
             </form>
         </div>
