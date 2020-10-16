@@ -6,6 +6,14 @@
 </template>
 
 <script>
+// export文でバインドを行う
+// バインド対象は変数、関数、クラス
+// exportは2種類存在する。名前付きとdefaultです。
+
+// 名前付きは、その名前で参照しますが、
+// defaultは、import文で名前を指定します。 
+// import m from '<export defaultが書かれたjsファイル名>'
+
 export default {
   name: 'app',
   data() {
