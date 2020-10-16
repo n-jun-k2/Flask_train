@@ -23,6 +23,12 @@ Vue CLI v4.5.7
 ...
 ```
 
+# packageをインストール
+```bash
+# node_modulesを作成
+> npm install
+```
+
 # デフォルトプロジェクトの構成
 ```bash
 <プロジェクトの作成で生成した名前のフォルダ>
