@@ -7,6 +7,7 @@ services:
     tty: true
     volumes:
       - ./app:/tmp/app
+      - ./view/dist:/tmp/public
     extra_hosts:
       - "local_dev:${LOCAL_HOST}"
     ports:
