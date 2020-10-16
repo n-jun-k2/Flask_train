@@ -8,9 +8,20 @@ services:
     volumes:
       - ./app:/tmp/app
     extra_hosts:
-      - "local_dev:192.168.11.8"
+      - "local_dev:${LOCAL_HOST}"
     ports:
       - "5000:5000"
+  node_js:
+    build:
+      context: .
+      dockerfile: ./Docker/node/Dockerfile
+    tty: true
+    volumes:
+      - ./view:/tmp
+    extra_hosts:
+      - "local_js:${LOCAL_HOST}"
+    ports:
+      - "10080:8080"
   mysql:
     build:
       context: .

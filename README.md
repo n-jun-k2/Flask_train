@@ -1,16 +1,22 @@
 # Flask_train
 flaskを用いた開発の訓練。
 # How to run
-```bash
-# コンテナを立ち上げる。
-docker-compose up -d
-# pythonコンテナにログイン
-docker-compose exec python /bin/bash
 
-# Flaskのスクリプトを起動
-python example1
-...
-```
+1. Create ``.env`` file.
+    ```
+    LOCAL_HOST=<ipアドレス>
+    ```
+2. Enter the following command
+    ```bash
+    # コンテナを立ち上げる。
+    docker-compose up -d
+    # pythonコンテナにログイン
+        docker-compose exec python /bin/bash
+
+    # Flaskのスクリプトを起動
+    python example1
+    ...
+    ```
 
 # Connect to WSL2 localhost
 Prepare a file ``c:/Users/<user name>/.wslconfig`` on the Windows side and describe as follows.
