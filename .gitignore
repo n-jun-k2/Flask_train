@@ -278,3 +278,4 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+v8-compile-cache-0
